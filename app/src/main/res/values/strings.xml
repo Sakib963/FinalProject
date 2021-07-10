@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="burger">
+        <b>Chicken Burger</b>😋 <br /> Price : 250TK<br />
+        Nothing beats a simple hamburger on a warm summer evening!
+        Ground beef is blended with an easy to prepare bread crumb mixture.
+        Pile these burgers with your favorite condiments, pop open a cool drink and enjoy!
+    </string>
+    <string name="pasta">
+        <b>Cream Pasta</b>😋<br />
+        Price : 180TK
+    </string>
+    <string name="grill">
+        <b>Chicken Grill</b>😋<br />
+        Price : 110TK
+    </string>
+    <string name="nachos">
+        <b>Chicken Nachos</b>😋<br />
+        Price : 290TK
+    </string>
+</resources>
