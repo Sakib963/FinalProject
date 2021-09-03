@@ -7,10 +7,18 @@
     tools:context=".OrderActivity"
     android:background="@drawable/cover">
 
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="700dp"
+        android:layout_height="200dp"
+        android:src="@drawable/restaurant_logo">
+    </ImageView>
+
     <LinearLayout
         android:id="@+id/order_template_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/logo_image"
         >
         <TextView
             android:layout_width="150dp"
@@ -39,13 +47,16 @@
             android:textSize="18sp">
         </TextView>
     </LinearLayout>
+
     <LinearLayout
-        android:id="@+id/order_layout"
+        android:id="@+id/order_layout_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/order_template_layout"
+        android:layout_marginBottom="5dp"
         >
         <TextView
+            android:id="@+id/name_one"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -55,6 +66,7 @@
         </TextView>
 
         <TextView
+            android:id="@+id/quantity_one"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -64,6 +76,7 @@
         </TextView>
 
         <TextView
+            android:id="@+id/price_one"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -73,5 +86,127 @@
         </TextView>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/order_layout_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_layout_one"
+        android:layout_marginBottom="5dp"
+        >
+        <TextView
+            android:id="@+id/name_two"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
 
+        <TextView
+            android:id="@+id/quantity_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/price_two"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order_layout_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_layout_two"
+        android:layout_marginBottom="5dp"
+        >
+        <TextView
+            android:id="@+id/name_three"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/quantity_three"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/price_three"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order_layout_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_layout_three"
+        android:layout_marginBottom="5dp"
+        >
+        <TextView
+            android:id="@+id/name_four"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/quantity_four"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/price_four"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </TextView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Order"
+        android:textSize="18sp"
+        android:background="@drawable/buttons">
+    </Button>
 </RelativeLayout>
