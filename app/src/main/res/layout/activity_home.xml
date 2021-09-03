@@ -7,6 +7,7 @@
     android:background="@drawable/cover">
 
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating_button"
         android:layout_width="wrap_content"
@@ -46,13 +47,16 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="@string/burger"
-                android:textColor="@color/black"/>
+                android:textColor="#B31717"
+                android:textSize="15sp"/>
 
             <ImageView
                 android:id="@+id/grill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
                 android:src="@drawable/grilll" />
@@ -61,6 +65,9 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#B31717"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
                 android:text="@string/grill" />
 
             <ImageView
@@ -69,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/nachos"
                 android:contextClickable="true"
                 />
@@ -77,7 +85,10 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nachos" />
+                android:textColor="#B31717"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:text="@string/nacho" />
 
             <ImageView
                 android:id="@+id/pasta"
@@ -85,12 +96,16 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/paasta" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#B31717"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
                 android:text="@string/pasta" />
         </LinearLayout>
     </ScrollView>

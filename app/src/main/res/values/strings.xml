@@ -10,21 +10,27 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="burger">
-        <b>Chicken Burger</b>😋 <br /> Price : 250TK<br />
+        <b>Chicken Burger</b>😋 \n<br /><b> Price : 250TK</b><br />\n
         Nothing beats a simple hamburger on a warm summer evening!
         Ground beef is blended with an easy to prepare bread crumb mixture.
         Pile these burgers with your favorite condiments, pop open a cool drink and enjoy!
     </string>
+
     <string name="pasta">
-        <b>Cream Pasta</b>😋<br />
-        Price : 180TK
+        <b>FUSILLI CREAMY CHICKEN PASTA</b>😋\n<br/><b> Price : 180TK</b><br/>\n
+        Fusilli (Spiral Pasta) in a cream sauce with chargrilled chicken, sauteed mushrooms, onions,
+        fresh cream, Bechamel and parmesan cheese cooked with a blend of spices.
     </string>
+
     <string name="grill">
-        <b>Chicken Grill</b>😋<br />
-        Price : 110TK
+        <b>Grilled Chicken</b>😋\n<br /><b> Price : 110TK</b><br/>\n
+        This grilled chicken breast recipe is boneless skinless chicken breasts soaked in a
+        flavorful garlic and herb marinade, then grilled to brown perfection.
     </string>
-    <string name="nachos">
-        <b>Chicken Nachos</b>😋<br />
-        Price : 290TK
+
+    <string name="nacho">
+        <b>Chicken Nachos</b>😋\n<br><b> Price : 290TK</b></br>\n
+        Crispy tortilla chips are topped together with seasoned chicken, cheese and
+        other favorite nacho toppings.
     </string>
 </resources>
