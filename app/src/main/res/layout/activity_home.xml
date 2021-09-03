@@ -15,9 +15,18 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="50px"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/proceed_button"
+        app:layout_constraintEnd_toEndOf="@+id/proceed_button"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+    <Button
+        android:id="@+id/proceed_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Proceed"
+        android:background="@drawable/buttons"
+        ></Button>
     
 
     <ScrollView
@@ -52,12 +61,58 @@
                 android:textColor="#B31717"
                 android:textSize="15sp"/>
             <TextView
-                android:id="@+id/burger_details"
+                android:id="@+id/burger_price_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/burger_details"
+                android:text="@string/burger_price"
                 android:textColor="#B31717"
                 android:textSize="15sp"/>
+            <RelativeLayout
+                android:id="@+id/burger_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/minus_burger"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttons"
+                    android:text="-"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/burger_quantity_text"
+                    android:layout_toRightOf="@+id/minus_burger"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:background="@drawable/input_design"
+                    ></TextView>
+                <Button
+                    android:id="@+id/burger_cart_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_design"
+                    android:text="Add to Cart"
+                    android:textSize="10sp"></Button>
+
+                <Button
+                    android:id="@+id/plus_burger"
+                    android:layout_toRightOf="@+id/burger_quantity_text"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="20sp"
+                    android:background="@drawable/buttons"
+                    />
+
+            </RelativeLayout>
+
+
 
             <ImageView
                 android:id="@+id/grill_image"
@@ -77,12 +132,56 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/grill" />
             <TextView
-                android:id="@+id/grill_details"
+                android:id="@+id/grill_price_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/grill_details"
+                android:text="@string/grill_price"
                 android:textColor="#B31717"
                 android:textSize="15sp"/>
+            <RelativeLayout
+                android:id="@+id/grill_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/minus_grill"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttons"
+                    android:text="-"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/grill_quantity_text"
+                    android:layout_toRightOf="@+id/minus_grill"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:background="@drawable/input_design"
+                    ></TextView>
+                <Button
+                    android:id="@+id/grill_cart_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_design"
+                    android:text="Add to Cart"
+                    android:textSize="10sp"></Button>
+
+                <Button
+                    android:id="@+id/plus_grill"
+                    android:layout_toRightOf="@+id/grill_quantity_text"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="20sp"
+                    android:background="@drawable/buttons"
+                    />
+
+            </RelativeLayout>
 
             <ImageView
                 android:id="@+id/nachos_image"
@@ -104,12 +203,56 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/nacho" />
             <TextView
-                android:id="@+id/nacho_details"
+                android:id="@+id/nacho_price_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nacho_details"
+                android:text="@string/nacho_price"
                 android:textColor="#B31717"
                 android:textSize="15sp"/>
+            <RelativeLayout
+                android:id="@+id/nacho_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/minus_nacho"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttons"
+                    android:text="-"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/nacho_quantity_text"
+                    android:layout_toRightOf="@+id/minus_nacho"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:background="@drawable/input_design"
+                    ></TextView>
+                <Button
+                    android:id="@+id/nacho_cart_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_design"
+                    android:text="Add to Cart"
+                    android:textSize="10sp"></Button>
+
+                <Button
+                    android:id="@+id/plus_nacho"
+                    android:layout_toRightOf="@+id/nacho_quantity_text"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="20sp"
+                    android:background="@drawable/buttons"
+                    />
+
+            </RelativeLayout>
 
             <ImageView
                 android:id="@+id/pasta_image"
@@ -129,12 +272,59 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/pasta" />
             <TextView
-                android:id="@+id/pasta_details"
+                android:id="@+id/pasta_price_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/pasta_details"
+                android:text="@string/pasta_price"
                 android:textColor="#B31717"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/pasta_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp">
+
+                <Button
+                    android:id="@+id/minus_pasta"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttons"
+                    android:text="-"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/pasta_quantity_text"
+                    android:layout_toRightOf="@+id/minus_pasta"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:background="@drawable/input_design"
+                    ></TextView>
+                <Button
+                    android:id="@+id/pasta_cart_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_design"
+                    android:text="Add to Cart"
+                    android:textSize="10sp"></Button>
+
+                <Button
+                    android:id="@+id/plus_pasta"
+                    android:layout_toRightOf="@+id/pasta_quantity_text"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="20sp"
+                    android:background="@drawable/buttons"
+
+                    />
+
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

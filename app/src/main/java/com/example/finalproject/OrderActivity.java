@@ -15,7 +15,7 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
 
-        home_button = findViewById(R.id.home_button);
+
 
         home_button.setOnClickListener(new View.OnClickListener() {
             @Override
