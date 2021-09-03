@@ -44,16 +44,23 @@
                 android:clickable="true"/>
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/burger_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="@string/burger"
                 android:textColor="#B31717"
                 android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/burger_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/burger_details"
+                android:textColor="#B31717"
+                android:textSize="15sp"/>
 
             <ImageView
-                android:id="@+id/grill"
+                android:id="@+id/grill_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -62,16 +69,23 @@
                 android:src="@drawable/grilll" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/grill_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#B31717"
                 android:textSize="15sp"
                 android:layout_marginTop="5dp"
                 android:text="@string/grill" />
+            <TextView
+                android:id="@+id/grill_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grill_details"
+                android:textColor="#B31717"
+                android:textSize="15sp"/>
 
             <ImageView
-                android:id="@+id/nachos"
+                android:id="@+id/nachos_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
@@ -82,16 +96,23 @@
                 />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/nacho_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#B31717"
                 android:textSize="15sp"
                 android:layout_marginTop="5dp"
                 android:text="@string/nacho" />
+            <TextView
+                android:id="@+id/nacho_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nacho_details"
+                android:textColor="#B31717"
+                android:textSize="15sp"/>
 
             <ImageView
-                android:id="@+id/pasta"
+                android:id="@+id/pasta_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
@@ -100,13 +121,20 @@
                 android:src="@drawable/paasta" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/pasta_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#B31717"
                 android:textSize="15sp"
                 android:layout_marginTop="5dp"
                 android:text="@string/pasta" />
+            <TextView
+                android:id="@+id/pasta_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pasta_details"
+                android:textColor="#B31717"
+                android:textSize="15sp"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
