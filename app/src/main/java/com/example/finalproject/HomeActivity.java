@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -15,7 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class HomeActivity extends AppCompatActivity {
     ImageView burger, grill, pasta, nacho;
     FloatingActionButton floatingActionButton;
-    Button burger_cart, burger_plus, burger_minus, grill_cart, grill_plus, grill_minus, pasta_cart, pasta_plus, pasta_minus, nacho_cart, nacho_plus, nacho_minus;
+    Button burger_cart, burger_plus, burger_minus, grill_cart, grill_plus, grill_minus, pasta_cart, pasta_plus, pasta_minus, nacho_cart, nacho_plus, nacho_minus, proceed;
     TextView burger_quantity,grill_quantity, pasta_quantity,nacho_quantity;
     int quantity_of_burger,quantity_of_grill, quantity_of_pasta,quantity_of_nacho;
 
@@ -48,6 +49,8 @@ public class HomeActivity extends AppCompatActivity {
         nacho_plus = findViewById(R.id.plus_nacho);
         nacho_minus = findViewById(R.id.minus_nacho);
         nacho_quantity = findViewById(R.id.nacho_quantity_text);
+
+        proceed = findViewById(R.id.proceed_button);
 
         floatingActionButton = findViewById(R.id.floating_button);
 
@@ -194,6 +197,18 @@ public class HomeActivity extends AppCompatActivity {
                 quantity_of_nacho = quantity_of_nacho + 1;
 
                 nacho_quantity.setText(String.valueOf(quantity_of_nacho));
+            }
+        });
+
+        proceed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(HomeActivity.this, OrderActivity.class);
+                    intent.putExtra("burger_quantity", quantity_of_burger);
+                    intent.putExtra("grill_quantity", quantity_of_grill);
+                    intent.putExtra("pasta_quantity", quantity_of_pasta);
+                    intent.putExtra("nacho_quantity", quantity_of_nacho);
+                    startActivity(intent);
             }
         });
 

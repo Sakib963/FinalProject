@@ -56,7 +56,7 @@
         android:layout_marginBottom="5dp"
         >
         <TextView
-            android:id="@+id/name_one"
+            android:id="@+id/name_one_one"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -66,7 +66,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/quantity_one"
+            android:id="@+id/quantity_one_one"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -76,7 +76,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/price_one"
+            android:id="@+id/price_one_one"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -94,7 +94,7 @@
         android:layout_marginBottom="5dp"
         >
         <TextView
-            android:id="@+id/name_two"
+            android:id="@+id/name_two_two"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -104,7 +104,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/quantity_two"
+            android:id="@+id/quantity_two_two"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -114,7 +114,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/price_two"
+            android:id="@+id/price_two_two"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -132,7 +132,7 @@
         android:layout_marginBottom="5dp"
         >
         <TextView
-            android:id="@+id/name_three"
+            android:id="@+id/name_three_three"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -142,7 +142,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/quantity_three"
+            android:id="@+id/quantity_three_three"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -152,7 +152,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/price_three"
+            android:id="@+id/price_three_three"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -170,7 +170,7 @@
         android:layout_marginBottom="5dp"
         >
         <TextView
-            android:id="@+id/name_four"
+            android:id="@+id/name_four_four"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -180,7 +180,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/quantity_four"
+            android:id="@+id/quantity_four_four"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -190,7 +190,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/price_four"
+            android:id="@+id/price_four_four"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -209,4 +209,30 @@
         android:textSize="18sp"
         android:background="@drawable/buttons">
     </Button>
+
+    <TextView
+        android:id="@+id/sub_total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sub Total : "
+        android:textSize="18sp"
+        android:layout_above="@id/order_button"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sub_total_text"
+        android:text="0.00"
+        android:layout_above="@id/order_button"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="200dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"></TextView>
 </RelativeLayout>
