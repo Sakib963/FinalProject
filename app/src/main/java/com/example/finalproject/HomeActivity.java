@@ -18,7 +18,7 @@ public class HomeActivity extends AppCompatActivity {
     FloatingActionButton floatingActionButton;
     Button burger_cart, burger_plus, burger_minus, grill_cart, grill_plus, grill_minus, pasta_cart, pasta_plus, pasta_minus, nacho_cart, nacho_plus, nacho_minus, proceed;
     TextView burger_quantity,grill_quantity, pasta_quantity,nacho_quantity;
-    int quantity_of_burger,quantity_of_grill, quantity_of_pasta,quantity_of_nacho;
+    int quantity_of_burger =0, quantity_of_grill =0, quantity_of_pasta =0, quantity_of_nacho =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,12 +76,6 @@ public class HomeActivity extends AppCompatActivity {
         nacho_quantity.setVisibility(View.INVISIBLE);
         nacho_minus.setVisibility(View.INVISIBLE);
         nacho_plus.setVisibility(View.INVISIBLE);
-
-        quantity_of_burger = 1;
-        quantity_of_grill = 1;
-        quantity_of_pasta = 1;
-        quantity_of_nacho = 1;
-
 
 
         burger_cart.setOnClickListener(new View.OnClickListener() {
@@ -203,14 +197,18 @@ public class HomeActivity extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Intent intent = new Intent(HomeActivity.this, OrderActivity.class);
-                    intent.putExtra("burger_quantity", quantity_of_burger);
-                    intent.putExtra("grill_quantity", quantity_of_grill);
-                    intent.putExtra("pasta_quantity", quantity_of_pasta);
-                    intent.putExtra("nacho_quantity", quantity_of_nacho);
-                    startActivity(intent);
+                String s1 = String.valueOf(quantity_of_burger);
+                String s2 = String.valueOf(quantity_of_grill);
+                String s3 = String.valueOf(quantity_of_nacho);
+                String s4 = String.valueOf(quantity_of_pasta);
+
+                Intent intent = new Intent(HomeActivity.this, OrderActivity.class);
+                intent.putExtra("burger_quantity_key", s1);
+                intent.putExtra("grill_quantity_key", s2);
+                intent.putExtra("nacho_quantity_key", s3);
+                intent.putExtra("pasta_quantity_key", s4);
+                startActivity(intent);
             }
         });
-
     }
 }
