@@ -11,7 +11,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+
 public class OrderActivity extends AppCompatActivity {
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference databaseReference = database.getReference().child("Orders");
+    FirebaseAuth mAuth;
 
 
     TextView textview_no_one, textview_no_two, textview_no_three, textview_no_four,
@@ -56,7 +67,11 @@ public class OrderActivity extends AppCompatActivity {
         textview_price_three = findViewById(R.id.row_four_textview_four);
         textview_price_four = findViewById(R.id.row_five_textview_four);
 
+        comment = findViewById(R.id.comment_edit_text);
+
         textview_total_price = findViewById(R.id.table_two_textview_eight);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
         Intent intent = getIntent();
@@ -127,18 +142,52 @@ public class OrderActivity extends AppCompatActivity {
         });
 
 
+
+
         confirm_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String address_full_name = full_name.getText().toString();
-                String address_contact_number = contact_number.getText().toString();
-                String address_street = street_address.getText().toString();
-                String address_city = city.getText().toString();
+
 
                 if(!TextUtils.isEmpty(full_name.getText().toString()) && !TextUtils.isEmpty(contact_number.getText().toString()) &&
                         !TextUtils.isEmpty(street_address.getText().toString()) && !TextUtils.isEmpty(city.getText().toString()))
                 {
                     /* Have to save order to database */
+
+                    String user_full_name = full_name.getText().toString();
+                    String user_phone_number = contact_number.getText().toString();
+                    String user_street_address = street_address.getText().toString();
+                    String user_city = city.getText().toString();
+                    String user_extra_instruction = comment.getText().toString();
+                    String food_name_one = textview_name_one.getText().toString();
+                    String food_name_two= textview_name_two.getText().toString();
+                    String food_name_three = textview_name_three.getText().toString();
+                    String food_name_four = textview_name_four.getText().toString();
+                    String quantity_food_one = textview_quantity_one.getText().toString();
+                    String quantity_food_two= textview_quantity_two.getText().toString();
+                    String quantity_food_three = textview_quantity_three.getText().toString();
+                    String quantity_food_four = textview_quantity_four.getText().toString();
+                    String sub_total = textview_total_price.getText().toString();
+                    String order_id = databaseReference.push().getKey();
+
+                    HashMap<String, String> usermap = new HashMap<>();
+                    usermap.put("orderID", order_id);
+                    usermap.put("name", user_full_name);
+                    usermap.put("phoneNumber", user_phone_number);
+                    usermap.put("streetAddress", user_street_address);
+                    usermap.put("city", user_city);
+                    usermap.put("exIns", user_extra_instruction);
+                    usermap.put("foodOne", food_name_one);
+                    usermap.put("foodTwo", food_name_two);
+                    usermap.put("foodThree", food_name_three);
+                    usermap.put("foodFour", food_name_four);
+                    usermap.put("quaOne", quantity_food_one);
+                    usermap.put("quaTwo", quantity_food_two);
+                    usermap.put("quaThree", quantity_food_three);
+                    usermap.put("quaFour", quantity_food_four);
+                    usermap.put("total", sub_total);
+
+                    databaseReference.child("orderID").child(order_id).setValue(usermap);
 
                     Toast.makeText(OrderActivity.this, "Order Successfully Received.\nThank you for ordering", Toast.LENGTH_SHORT).show();
 
@@ -172,4 +221,5 @@ public class OrderActivity extends AppCompatActivity {
             }
         });
     }
+
 }

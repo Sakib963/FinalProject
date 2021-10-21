@@ -92,8 +92,15 @@ public class HomeActivity extends AppCompatActivity {
         burger_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quantity_of_burger = quantity_of_burger -1;
+                if(quantity_of_burger == 0)
+                {
+                    quantity_of_burger = 0;
+                }
+                else {
 
+                    quantity_of_burger = quantity_of_burger - 1;
+
+                }
                 burger_quantity.setText(String.valueOf(quantity_of_burger));
             }
         });
@@ -121,7 +128,13 @@ public class HomeActivity extends AppCompatActivity {
         grill_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quantity_of_grill = quantity_of_grill -1;
+                if(quantity_of_grill == 0)
+                {
+                    quantity_of_grill = 0;
+                }
+                else {
+                    quantity_of_grill = quantity_of_grill - 1;
+                }
 
                 grill_quantity.setText(String.valueOf(quantity_of_grill));
             }
@@ -150,7 +163,15 @@ public class HomeActivity extends AppCompatActivity {
         pasta_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quantity_of_pasta = quantity_of_pasta -1;
+                if(quantity_of_pasta == 0)
+                {
+                    quantity_of_pasta = 0;
+                }
+                else {
+
+                    quantity_of_pasta = quantity_of_pasta - 1;
+
+                }
 
                 pasta_quantity.setText(String.valueOf(quantity_of_pasta));
             }
@@ -179,7 +200,15 @@ public class HomeActivity extends AppCompatActivity {
         nacho_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quantity_of_nacho = quantity_of_nacho -1;
+                if(quantity_of_nacho == 0)
+                {
+                    quantity_of_nacho = 0;
+                }
+                else {
+
+                    quantity_of_nacho = quantity_of_nacho - 1;
+
+                }
 
                 nacho_quantity.setText(String.valueOf(quantity_of_nacho));
             }
@@ -197,17 +226,25 @@ public class HomeActivity extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s1 = String.valueOf(quantity_of_burger);
-                String s2 = String.valueOf(quantity_of_grill);
-                String s3 = String.valueOf(quantity_of_nacho);
-                String s4 = String.valueOf(quantity_of_pasta);
 
-                Intent intent = new Intent(HomeActivity.this, OrderActivity.class);
-                intent.putExtra("burger_quantity_key", s1);
-                intent.putExtra("grill_quantity_key", s2);
-                intent.putExtra("nacho_quantity_key", s3);
-                intent.putExtra("pasta_quantity_key", s4);
-                startActivity(intent);
+                if (quantity_of_burger == 0 && quantity_of_grill == 0 && quantity_of_pasta == 0 && quantity_of_nacho ==0)
+                {
+                    proceed.setError("NO ITEM SELECTED");
+                    Toast.makeText(HomeActivity.this, "NO ITEM SELECTED", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    String s1 = String.valueOf(quantity_of_burger);
+                    String s2 = String.valueOf(quantity_of_grill);
+                    String s3 = String.valueOf(quantity_of_nacho);
+                    String s4 = String.valueOf(quantity_of_pasta);
+
+                    Intent intent = new Intent(HomeActivity.this, OrderActivity.class);
+                    intent.putExtra("burger_quantity_key", s1);
+                    intent.putExtra("grill_quantity_key", s2);
+                    intent.putExtra("nacho_quantity_key", s3);
+                    intent.putExtra("pasta_quantity_key", s4);
+                    startActivity(intent);
+                }
             }
         });
     }
