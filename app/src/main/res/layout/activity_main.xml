@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/back">
+    android:background="@drawable/nice_one"
+    >
 
     <Button
         android:id="@+id/out_button"
@@ -13,15 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Logout"
-        android:textAllCaps="false"
-        android:textSize="18sp"
         android:textColor="@color/white"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:padding="10dp"
-        android:textStyle="bold"
         />
 
     <Button
@@ -34,4 +32,25 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"/>
+
+    <ImageView
+        android:id="@+id/login_app_logo"
+        android:layout_width="700dp"
+        android:layout_height="200dp"
+        android:src="@drawable/restaurant_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        ></ImageView>
+
+    <ImageView
+        android:id="@+id/tagline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/login_app_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-176dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/tagline_idea"></ImageView>
+
 </RelativeLayout>
